@@ -1,7 +1,9 @@
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,6 +33,8 @@ public class HelloWorld {
 
         } catch (UnsupportedEncodingException e) {
             logger.log(Level.WARNING,"Encoding problems.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
